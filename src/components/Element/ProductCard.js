@@ -18,11 +18,7 @@ export const ProductCard = ({product}) => {
             
             <div className="flex items-center my-2">
                 <Rating rating = {rating}/>
-                {/* <i className="text-lg bi bi-star-fill text-yellow-500 mr-1"></i>
-                <i className="text-lg bi bi-star-fill text-yellow-500 mr-1"></i>
-                <i className="text-lg bi bi-star-fill text-yellow-500 mr-1"></i>
-                <i className="text-lg bi bi-star-fill text-yellow-500 mr-1"></i>
-                <i className="text-lg bi bi-star text-yellow-500 mr-1"></i> */}
+        
             </div>
 
             <p className="flex justify-between items-center">

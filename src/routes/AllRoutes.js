@@ -5,8 +5,8 @@ export const AllRoutes = () => {
     <>
       <Routes>
         <Route path="/" element = {< HomePage/>}/>
-         <Route path="/Products" element = {< Productlist/>}/>
-         <Route path="/Products/:id" element = {< ProductDetail/>}/>
+         <Route path="/products" element = {< Productlist/>}/>
+         <Route path="/products/:id" element = {< ProductDetail/>}/>
          
       </Routes>
     

@@ -1,6 +1,41 @@
-
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export const Register = () => {
+  const navigate = useNavigate();
+
+  async function handleRegister(event){
+    event.preventDefault();
+    const authDetail = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      password: event.target.password.value
+    }
+    const requestOptions = {
+      method: "POST",
+      headers: {"content-Type": "application/json"},
+      body: JSON.stringify(authDetail)
+    };
+
+    try {
+    const response = await fetch("http://localhost:8000/register", requestOptions);
+    const data = await response.json();
+
+    if (data.accessToken) {
+      navigate("/products");
+    } else {
+      toast.error(data.message || "Email already exists ❌");
+    }
+
+  } catch (error) {
+    toast.error("Server error ⚠️");
+  }
+  if(data.accessToken){
+      sessionStorage.setItem("tooken", JSON.stringify(data.accessToken));
+      sessionStorage.setItem("cdid", JSON.stringify(data.user.id))
+    }
+}
+
   return (
     <main>
       <section>

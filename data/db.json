@@ -286,6 +286,12 @@
       "password": "$2a$10$uEUqtV9MNh6HR1O1EtMBH.GCj8fr/Bvv96leKPKc1Ttsdl7I/cOLy",
       "name": "helllo",
       "id": 8
+    },
+    {
+      "email": "shreya@123example.com",
+      "password": "$2a$10$Mvandu/KAVDZa.6qEV8CWexPGBHdAjctMVPdnKoAsLalXGD26JJ/.",
+      "name": "shreya ",
+      "id": 9
     }
   ]
 }
